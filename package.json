@@ -1,0 +1,68 @@
+{
+    "name": "vue-template-beauty",
+    "displayName": "vue-template-beauty",
+    "description": "",
+    "version": "0.0.1",
+    "publisher": "conandsherry",
+    "engines": {
+        "vscode": "^1.25.0"
+    },
+    "categories": ["Other"],
+    "activationEvents": ["onCommand:extension.vueTemplateBeautify"],
+    "main": "./extension",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ConandSherry/vue-template-beautify-vscode"
+    },
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.vueTemplateBeautify",
+                "title": "Vue template beautify"
+            }
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "vue template beautify configuration",
+            "properties": {
+                "vueTemplateBeautify.wrap": {
+                    "type": "integer",
+                    "default": 160,
+                    "description":
+                        "`This option sets how many columns wide text content may be before wrapping onto a new line.The value 0 disables text wrapping.",
+                    "scope": "resource"
+                },
+
+                "vueTemplateBeautify.quoteConvert": {
+                    "type": "string",
+                    "enum": ["double", "single", "none"],
+                    "default": "none",
+                    "description":
+                        "`Convert the quote characters delimiting strings from either double or single quotes to the other.",
+                    "scope": "resource"
+                },
+                "vueTemplateBeautify.force_attribute": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Forces all markup attributes to be indented each on their own line of code.",
+                    "scope": "resource"
+                }
+            }
+        },
+        "properties": {}
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install && node ./init/init.js",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "eslint": "^4.11.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "prettydiff2": "^2.2.7"
+    }
+}
