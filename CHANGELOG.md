@@ -8,6 +8,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 -   Initial release
 
+## [0.0.3]
+
+-   add icon
+
 ## [0.0.2]
 
 -   Using `vue-template-compiler` to get template content instead
