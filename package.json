@@ -2,7 +2,7 @@
     "name": "vue-template-beauty",
     "displayName": "vue-template-beauty",
     "description": "",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "conandsherry",
     "engines": {
         "vscode": "^1.25.0"
@@ -32,7 +32,6 @@
                         "`This option sets how many columns wide text content may be before wrapping onto a new line.The value 0 disables text wrapping.",
                     "scope": "resource"
                 },
-
                 "vueTemplateBeautify.quoteConvert": {
                     "type": "string",
                     "enum": ["double", "single", "none"],
@@ -63,6 +62,7 @@
         "@types/mocha": "^2.2.42"
     },
     "dependencies": {
-        "prettydiff2": "^2.2.7"
+        "prettydiff2": "^2.2.7",
+        "vue-template-compiler": "^2.5.17"
     }
 }
